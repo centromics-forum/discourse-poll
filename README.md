@@ -12,7 +12,7 @@ after_code:
   cd: $home/plugins
   cmd:
 - rm -Rf poll
-- git clone -b develop https://github.com/centromics-m/discourse-poll.git poll
+- git clone https://github.com/centromics-forum/discourse-poll.git
 ```
 
 2. source
@@ -20,7 +20,7 @@ after_code:
 ``` shell
 $ cd $home/plugins
 $ rm -Rf poll
-$ git clone -b develop https://github.com/centromics-m/discourse-poll.git poll
+$ git clone https://github.com/centromics-forum/discourse-poll.git
 $ cd $home
 $ bundle exec rake db:migrate
 ```
