@@ -226,7 +226,7 @@ export default class PollListWidgetComponent extends Component {
           {{#if this.categories.length}}
             {{#each this.categories as |category index|}}
               <article style="background-color:#{{category.color}}">
-                <a href="{{category.url}}"> {{category.name}}</a>
+                <a href="{{category.url}}"> {{category.name}}<span style="color:#{{category.color}}">&gt;</span></a>
               </article>
             {{/each}}
           {{/if}}
