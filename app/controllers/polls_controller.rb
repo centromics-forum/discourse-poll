@@ -8,10 +8,10 @@ class DiscoursePoll::PollsController < ::ApplicationController
   def poll_list_home
 
     # find only in non-deleted topics and same category
-    @polls = Poll.joins(:post).joins('INNER JOIN topics AS t ON posts.topic_id = t.id')
-                 .where('t.deleted_at': nil).order('id desc').limit(10)
+    @polls = Poll.joins(:post).joins('INNER JOIN topics AS t ON posts.topic_id = t.id').joins('INNER JOIN categories AS c ON t.category_id = c.id')
+                 .where('t.deleted_at': nil).select('polls.name,polls.status,polls.post_id,polls.type,t.*,c.name as category_name').order('id desc').limit(10)
 
-    render json: @polls, each_serializer: PollSerializer
+    render json: @polls, each_serializer: HotPollSerializer
   end
 
   def poll_list

@@ -120,7 +120,7 @@ class PollSerializer < ApplicationSerializer
     doc = Nokogiri::HTML(html_string)
     doc_element = doc.css('.poll-data-link')
 
-    return doc_element.to_html
+    doc_element.to_html
   end
 
   def post_topic_overview

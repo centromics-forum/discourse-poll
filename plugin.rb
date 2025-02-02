@@ -43,6 +43,7 @@ after_initialize do
   require_relative "app/models/poll"
   require_relative "app/serializers/poll_option_serializer"
   require_relative "app/serializers/poll_serializer"
+  require_relative "app/serializers/hot_poll_serializer"
   require_relative "jobs/regular/close_poll"
   require_relative "lib/poll"
   require_relative "lib/ranked_choice"

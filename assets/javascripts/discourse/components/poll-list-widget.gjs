@@ -50,7 +50,7 @@ export default class PollListWidgetComponent extends Component {
         return; // 다음 반복으로 넘어감
       }
 
-      console.log(category);
+      // console.log(category);
       this.categories.push(category);
     });
   }
@@ -203,7 +203,8 @@ export default class PollListWidgetComponent extends Component {
               <!-- Slides -->
               {{#each this.hotPolls as |poll index|}}
                 <article class="swiper-slide">
-                  <h3>{{poll.post_topic_title}}</h3>
+                  <h3 class="text-with-line"><span>{{poll.category_name}}</span></h3>
+                  <h3><span>{{poll.post_topic_title}}</span></h3>
                   <div>
                     {{{poll.post_topic_overview}}}
                   </div>
