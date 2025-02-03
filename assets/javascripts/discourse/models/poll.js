@@ -18,7 +18,6 @@ export default class Poll {
   @tracked toDate;
   @tracked name;
   @tracked period;
-  @tracked categoryTitle;
 
   constructor(args = {}) {
     this.id = args.id;
@@ -33,6 +32,5 @@ export default class Poll {
     this.toDate = args.to_date;
     this.name = args.name;
     this.period = args.period;
-    this.categoryTitle = args.categoryTitle;
   }
 }

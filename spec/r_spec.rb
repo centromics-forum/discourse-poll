@@ -25,8 +25,13 @@ end
 
 RSpec.describe 'Discourse Poll Test' do
   before(:all) do
-    options = Selenium::WebDriver::Options.chrome
-    options.add_option(:detach, true) # 이 옵션을 추가
+    # options = Selenium::WebDriver::Options.chrome
+    # options.add_option(:detach, true) # 이 옵션을 추가
+    options = Selenium::WebDriver::Firefox::Options.new
+    # options.headless!  # 백그라운드 모드에서 실행 (옵션)
+
+    # Firefox 브라우저 시작
+
 
     credentials_file = 'credentials.json'
     credentials = load_credentials(credentials_file)
@@ -35,7 +40,8 @@ RSpec.describe 'Discourse Poll Test' do
     @admin_username = credentials['username']
     @admin_password = credentials['password']
 
-    @driver = Selenium::WebDriver.for :chrome, options: options
+    @driver = Selenium::WebDriver.for :firefox, options: options
+    #@driver = Selenium::WebDriver.for :chrome, options: options
   end
 
   after(:all) do
