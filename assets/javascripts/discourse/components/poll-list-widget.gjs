@@ -82,7 +82,6 @@ export default class PollListWidgetComponent extends Component {
       //   this.poll = polls[0];
       // }
       this.hotPolls = polls;
-      console.log("Fetched polls:", polls[0]);
     });
 
     this.getPolls.then((result) => {
@@ -217,10 +216,10 @@ export default class PollListWidgetComponent extends Component {
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-next">&gt;</div>
 
           <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          <div class="swiper-scrollbar">saf as</div>
         </section>
 
         <section id="main-poll-category">
