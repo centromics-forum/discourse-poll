@@ -23,7 +23,7 @@ class DiscoursePoll::PollsController < ::ApplicationController
 
     # find only in non-deleted topics and same category
     @polls = Poll.joins(:post).joins('INNER JOIN topics AS t ON posts.topic_id = t.id')
-      .where('t.category_id': category, 't.deleted_at': nil).order('id desc').limit(10)
+      .where('t.category_id': category, 't.deleted_at': nil).order('id desc').limit(5)
 
     render json: @polls, each_serializer: PollSerializer
   end
