@@ -1,28 +1,34 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-// import Swiper from '../../vendor/swiper/swiper-bundle.mjs';
 
 function initializeSwiper(api) {
   api.onPageChange(() => {
-    const loadSwiper = async () => {
-
-      const { default: Swiper } = await import("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.mjs");
-      const container = document.querySelector(".swiper");
-
-      console.log('asdfasd');
-
-      if (container) {
-        new Swiper(container, {
-          loop: true,
-          pagination: { el: ".swiper-pagination", clickable: true },
-          navigation: {
-            nextEl: ".swiper-button-next",
-          },
-        });
-      }
-    };
-
+    if (!window.Swiper) {
+      $.getScript("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", () => {
+        initSwiper();
+      });
+    } else {
+      initSwiper();
+    }
   });
-};
+}
+
+function initSwiper() {
+  new Swiper('.swiper', {
+    loop: false,
+    slidesPerView: 3, // 한 번에 3개씩 표시
+    spaceBetween: 10, // 슬라이드 간 간격
+    centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  });
+}
 
 
 export default {
