@@ -216,10 +216,10 @@ export default class PollListWidgetComponent extends Component {
           <div class="swiper-pagination"></div>
 
           <!-- If we need navigation buttons -->
-          <div class="swiper-button-next">&gt;</div>
+          <div class="swiper-button-next"></div>
 
           <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar">saf as</div>
+          <div class="swiper-scrollbar"></div>
         </section>
 
         <section id="main-poll-category">
