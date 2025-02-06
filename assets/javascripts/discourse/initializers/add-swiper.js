@@ -25,6 +25,9 @@ function initSwiper() {
       el: '.swiper-scrollbar',
       draggable: true, // 스크롤바를 드래그 가능하게 설정
     },
+    breakpoints: {
+      1200: { slidesPerView: 3 }, // 화면 너비 1024px 이상일 때 3개
+    }
   });
 
   new Swiper('.swiper2', {
@@ -39,6 +42,9 @@ function initSwiper() {
       el: '.swiper-scrollbar2',
       draggable: true, // 스크롤바를 드래그 가능하게 설정
     },
+    breakpoints: {
+      1200: { slidesPerView: 3 }, // 화면 너비 1024px 이상일 때 3개
+    }
   });
 }
 

@@ -23,12 +23,16 @@
   border-radius: 24px;
   background: none;
   overflow: visible;
+  display:block !important;
   background: rgba(0, 0, 0, 0.3);
+  z-index:9999;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size:20px;
   font-weight: bold;
+  margin-left:20px;
+  line-height: 48px;
 }
 
 .swiper2 .swiper-button-next,.swiper2 .swiper-button-prev  {top:70px}
