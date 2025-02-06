@@ -68,6 +68,8 @@
 }
 
 
+.swiper .swiper-slide { width: 30%  !important;}
+
 #main-hot-polls {
   font-family: 'Pretendard';
   h1,h2,h3,h4,h5,h6,p {font-family: 'Pretendard';}
@@ -75,7 +77,6 @@
   article {
     position: relative;
     white-space: normal;
-    width: 30%;
     height: 250px;
     padding: 0 2% 0 0;
 
@@ -106,7 +107,6 @@
 #main-poll-category {
   article {
     position: relative;
-    display: inline-block;
     height: 160px;
     border-radius: 10px;
     margin: 0 2% 20px 0;
@@ -412,16 +412,10 @@
   }
 
 
-  #main-hot-polls {
-    article {
-      width: 70%;
-    }
-
-  }
+  .swiper .swiper-slide { width: 80%  !important;}
 
   #main-poll-category {
     article {
-      width: 45%;
       a {
         text-align: left;
         text-indent: 10%;

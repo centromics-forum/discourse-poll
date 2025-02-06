@@ -15,9 +15,8 @@ function initializeSwiper(api) {
 function initSwiper() {
   new Swiper('.swiper1', {
     loop: false,
-    slidesPerView: 3, // 한 번에 3개씩 표시
-    spaceBetween: 10, // 슬라이드 간 간격
     centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+    resizeObserver: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -30,9 +29,8 @@ function initSwiper() {
 
   new Swiper('.swiper2', {
     loop: false,
-    slidesPerView: 3, // 한 번에 3개씩 표시
-    spaceBetween: 10, // 슬라이드 간 간격
     centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+    resizeObserver: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
