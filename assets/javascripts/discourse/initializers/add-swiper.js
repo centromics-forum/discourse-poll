@@ -13,7 +13,7 @@ function initializeSwiper(api) {
 }
 
 function initSwiper() {
-  new Swiper('.swiper', {
+  new Swiper('.swiper1', {
     loop: false,
     slidesPerView: 3, // 한 번에 3개씩 표시
     spaceBetween: 10, // 슬라이드 간 간격
@@ -22,10 +22,24 @@ function initSwiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true, // 스크롤바를 드래그 가능하게 설정
+    },
+  });
+
+  new Swiper('.swiper2', {
+    loop: false,
+    slidesPerView: 3, // 한 번에 3개씩 표시
+    spaceBetween: 10, // 슬라이드 간 간격
+    centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar2',
+      draggable: true, // 스크롤바를 드래그 가능하게 설정
     },
   });
 }

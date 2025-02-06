@@ -194,7 +194,7 @@ export default class PollListWidgetComponent extends Component {
 
 
         <!-- Slider main container -->
-          <section id="main-hot-polls" class="swiper">
+          <section id="main-hot-polls" class="swiper1 swiper">
             <h2><span>quiz</span> in progress</h2>
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -212,24 +212,30 @@ export default class PollListWidgetComponent extends Component {
           {{/each}}
         {{/if}}
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button swiper-button-prev"></div>
+            <div class="swiper-button swiper-button-next"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </section>
 
-        <section id="main-poll-category">
+        <section id="main-poll-category" class="swiper2 swiper">
+        <div class="swiper-wrapper">
           {{#if this.categories.length}}
             {{#each this.categories as |category index|}}
-              <article style="background-color:#{{category.color}}">
+              <article style="background-color:#{{category.color}}" class="swiper-slide">
                 <a href="{{category.url}}"> {{category.name}}<span style="color:#{{category.color}}">&gt;</span></a>
               </article>
             {{/each}}
           {{/if}}
+        </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button swiper-button-prev"></div>
+          <div class="swiper-button swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar2"></div>
         </section>
 
         <section id="main-polls">
