@@ -82,6 +82,14 @@ export default class PollListWidgetComponent extends Component {
       //   this.poll = polls[0];
       // }
       this.hotPolls = polls;
+
+      if (!window.Swiper) {
+        $.getScript("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", () => {
+          this.initSwiper();
+        });
+      } else {
+        this.initSwiper();
+      }
     });
 
     this.getPolls.then((result) => {
@@ -121,6 +129,59 @@ export default class PollListWidgetComponent extends Component {
     this.categoryId = category;
 
     this.loadCurrentCategory();
+  }
+
+  @action
+  initSwiper() {
+    const swiper1=new Swiper('.swiper1', {
+      loop: false,
+      slidesPerView: 3,
+      centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+      resizeObserver: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true, // 스크롤바를 드래그 가능하게 설정
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 }, // 화면 너비 1024px 이상일 때 3개
+      }
+    });
+
+
+    if (swiper1.slides.length <= swiper1.params.slidesPerView) {
+      document.querySelector(".swiper1 .swiper-button-next").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper1 .swiper-button-prev").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper1 .swiper-scrollbar2").style.setProperty("display", "none", "important");
+    }
+
+
+    const swiper2= new Swiper('.swiper2', {
+      loop: false,
+      slidesPerView: 3,
+      centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
+      resizeObserver: true,
+      navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar2',
+        draggable: true, // 스크롤바를 드래그 가능하게 설정
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 }, // 화면 너비 1024px 이상일 때 3개
+      }
+    });
+
+    if (swiper2.slides.length <= swiper2.params.slidesPerView) {
+      document.querySelector(".swiper2 .swiper-button-next").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper2 .swiper-button-prev").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper2 .swiper-scrollbar2").style.setProperty("display", "none", "important");
+    }
   }
 
   get isFrontpage() {

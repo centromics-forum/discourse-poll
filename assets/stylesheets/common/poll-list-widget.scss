@@ -28,21 +28,21 @@
   z-index:9999;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after, .swiper-button-prev:after,.swiper-button-next2:after, .swiper-button-prev2:after {
   font-size:20px;
   font-weight: bold;
   margin-left:20px;
   line-height: 48px;
 }
 
-.swiper2 .swiper-button-next,.swiper2 .swiper-button-prev  {top:70px}
+.swiper-button-next2,.swiper-button-prev2  {top:70px}
 
- .swiper-button-next {
+ .swiper-button-next, .swiper-button-next2 {
    right:-15px;
   z-index: 100;
 }
 
-.swiper-button-prev {
+.swiper-button-prev,.swiper-button-prev2 {
   left: -15px;
   z-index: 100;
 }
