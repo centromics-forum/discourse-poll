@@ -135,7 +135,7 @@ export default class PollListWidgetComponent extends Component {
   initSwiper() {
     const swiper1=new Swiper('.swiper1', {
       loop: false,
-      slidesPerView: 3,
+      slidesPerView: 1,
       centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
       resizeObserver: true,
       navigation: {
@@ -161,12 +161,12 @@ export default class PollListWidgetComponent extends Component {
 
     const swiper2= new Swiper('.swiper2', {
       loop: false,
-      slidesPerView: 3,
+      slidesPerView: 1,
       centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
       resizeObserver: true,
       navigation: {
-        nextEl: '.swiper-button-next2',
-        prevEl: '.swiper-button-prev2',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       scrollbar: {
         el: '.swiper-scrollbar2',
