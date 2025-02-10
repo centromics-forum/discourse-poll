@@ -437,6 +437,9 @@
 
 
   .swiper .swiper-slide { width: 80%  !important;}
+  .swiper-button-next, .swiper-button-next2, .swiper-button-prev,.swiper-button-prev2 {
+    display: none !important;
+  }
 
   #main-poll-category {
     article {
