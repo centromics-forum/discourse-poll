@@ -152,10 +152,17 @@ export default class PollListWidgetComponent extends Component {
     });
 
 
-    if (swiper1.slides.length <= swiper1.params.slidesPerView) {
-      document.querySelector(".swiper1 .swiper-button-next").style.setProperty("display", "none", "important");
-      document.querySelector(".swiper1 .swiper-button-prev").style.setProperty("display", "none", "important");
-      document.querySelector(".swiper1 .swiper-scrollbar2").style.setProperty("display", "none", "important");
+    const getCurrentSlidesPerView = (swiper) => {
+      const breakpoint = swiper.currentBreakpoint;
+      return swiper.params.breakpoints[breakpoint]?.slidesPerView || swiper.params.slidesPerView;
+    };
+
+
+
+    if (swiper1.slides.length <= getCurrentSlidesPerView(swiper1)) {
+      document.querySelector(".swiper-wrapper1 .swiper-button-next").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper-wrapper1 .swiper-button-prev").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper-wrapper1 .swiper-scrollbar2").style.setProperty("display", "none", "important");
     }
 
 
@@ -165,8 +172,8 @@ export default class PollListWidgetComponent extends Component {
       centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
       resizeObserver: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
       },
       scrollbar: {
         el: '.swiper-scrollbar2',
@@ -177,10 +184,10 @@ export default class PollListWidgetComponent extends Component {
       }
     });
 
-    if (swiper2.slides.length <= swiper2.params.slidesPerView) {
-      document.querySelector(".swiper2 .swiper-button-next").style.setProperty("display", "none", "important");
-      document.querySelector(".swiper2 .swiper-button-prev").style.setProperty("display", "none", "important");
-      document.querySelector(".swiper2 .swiper-scrollbar2").style.setProperty("display", "none", "important");
+    if (swiper2.slides.length <=  getCurrentSlidesPerView(swiper2)) {
+      document.querySelector(".swiper-wrapper2 .swiper-button-next2").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper-wrapper2 .swiper-button-prev2").style.setProperty("display", "none", "important");
+      document.querySelector(".swiper-wrapper2 .swiper-scrollbar2").style.setProperty("display", "none", "important");
     }
   }
 
@@ -255,6 +262,8 @@ export default class PollListWidgetComponent extends Component {
 
 
         <!-- Slider main container -->
+        <div class="swiper-wrapper1 swiper-container-wrapper">
+          <div class="swiper-button swiper-button-prev"></div>
           <section id="main-hot-polls" class="swiper1 swiper">
             <h2><span>quiz</span> in progress</h2>
           <!-- Additional required wrapper -->
@@ -273,14 +282,13 @@ export default class PollListWidgetComponent extends Component {
           {{/each}}
         {{/if}}
           </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button swiper-button-prev"></div>
-            <div class="swiper-button swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </section>
+          <div class="swiper-button swiper-button-next"></div>
+          </div>
 
+        <div class="swiper-wrapper2 swiper-container-wrapper2">
+          <div class="swiper-button swiper-button-prev2"></div>
         <section id="main-poll-category" class="swiper2 swiper">
         <div class="swiper-wrapper">
           {{#if this.categories.length}}
@@ -291,13 +299,10 @@ export default class PollListWidgetComponent extends Component {
             {{/each}}
           {{/if}}
         </div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button swiper-button-prev"></div>
-          <div class="swiper-button swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
           <div class="swiper-scrollbar2"></div>
         </section>
+          <div class="swiper-button swiper-button-next2"></div>
+        </div>
 
         <section id="main-polls">
           <h1 class="cv-title">
