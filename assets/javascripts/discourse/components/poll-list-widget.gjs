@@ -255,7 +255,7 @@ export default class PollListWidgetComponent extends Component {
   <template>
     {{#if this.showInFrontend}}
       <div class="poll-widget-main" {{didInsert this.fetchPolls}}>
-        <section>
+        <section id="main-main">
           <h1>{{this.siteSettings.title}}</h1>
           <p>{{this.site_description}}</p>
         </section>
