@@ -315,9 +315,6 @@ export default class PollListWidgetComponent extends Component {
             </span>
           </h1>
           <div class="poll-category-more">
-            <a href="{{this.currentCategory.url}}">
-              {{this.currentCategory.name}} {{i18n "poll.admin.more"}}
-            </a><br>
             <a href="{{@siteURL}}/leaderboard/1?category={{this.categoryId}}">{{this.currentCategory.name}} {{i18n "poll.admin.leaderboard"}}</a>
           </div>
           {{#if this.polls.length}}

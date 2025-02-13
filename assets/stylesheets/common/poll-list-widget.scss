@@ -254,7 +254,18 @@
   .poll-category-more a {
     line-height:120%;
     display:block;
+    padding: 15px 12px 15px 33px;
+    background: #c3c3c3;
+    border-radius: 20px;
     }
+
+  .poll-category-more a:after {
+    content: '>';
+    padding-left: 16px;
+    color: red;
+    font-size:16px;
+    font-weight: bold;
+  }
 
     h1,
     h2,
