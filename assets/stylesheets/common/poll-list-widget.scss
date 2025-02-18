@@ -446,7 +446,6 @@
 
 
 @media (max-width: 450px) {
-  #main-polls .poll-category-more {top:70px}
   #main-polls .poll-category-more br {display:none;}
   #main-polls .poll-category-more a {float:right}
   #main-polls .poll-category-more a:first-child {margin-left:50px}
@@ -477,10 +476,7 @@
     background: var(--header-background);
   }
 
-  .poll-category-more {
-    top: 70px;
-  }
-
+  #main-polls .poll-category-more {top:70px}
   .mm-back {display:none}
 
 

@@ -258,7 +258,7 @@ export default class PollListWidgetComponent extends Component {
         <div class="mm-back">&nbsp;</div>
         <section id="main-main" style="position:relative;z-index:2">
           <h1>{{this.siteSettings.title}}</h1>
-          <p>{{this.site_description}}</p>
+          <p>{{{this.site_description}}}</p>
         </section>
 
 
