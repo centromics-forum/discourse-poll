@@ -473,7 +473,7 @@
     }
   }
   header.d-header {
-    background-color: var(--header-background);
+    background-color: var(--header-background) !important;
   }
 
   #main-polls .poll-category-more {top:70px}
@@ -558,5 +558,6 @@
 }
 
 @media (prefers-color-scheme: light) and  (max-width: 1199px) {
+  header.d-header { background-color: var(--header-background) !important }
   #main-main {color:var(--primary)}
 }
