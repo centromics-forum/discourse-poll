@@ -552,8 +552,8 @@
   }
 
   #main-main {color:var(--secondary)}
-  #main-hot-polls article a {color:var(--primary)}
-  #main-polls .poll-category-more a {color:var(--primary)}
+  #main-hot-polls article a {color:var(--secondary)}
+  #main-polls .poll-category-more a {color:var(--primary) !important;}
   .mm-back {position:absolute;top:0;left:0;width:100%;height:325px;z-index:1;background: linear-gradient(to right bottom, #06213F, #06213F, #010B17)}
 }
 
