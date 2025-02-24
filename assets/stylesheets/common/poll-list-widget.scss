@@ -308,7 +308,7 @@
         font-size: 3.56rem;
         line-height: 110%;
         margin: 1.78rem 0 1.424rem 0;
-        margin-top: -46px;
+        margin-top: -33px;
         margin-left: 3rem;
         display: block;
         font-size: 18px;
@@ -319,22 +319,27 @@
         background: var(--quaternary);
         border: 8px solid var(--primary);
         border-radius: 50%;
-        width: 22px;
-        height: 22px;
+        width: 16px;
+        height: 16px;
         display: inline-block;
         content: "";
         margin-left: 1rem;
         position: relative;
         z-index: 1;
-        left: -31px;
+        left: -30px;
     }
     .last-item {
-        padding-top: 80px;
+        padding-top: 50px;
         height: 35px;
         position: relative;
     }
+
+    .last-item:after {
+      margin-top:25px;
+    }
+
     .item {
-        padding-top: 100px;
+        padding-top: 80px;
         min-height: 150px;
         position: relative;
         ul.nav {
@@ -382,7 +387,7 @@
         line-height: 100%;
     }
     .vertical-line {
-        width: 8px;
+        width: 4px;
         background-color: var(--primary);
         position: absolute;
         left: 0;
