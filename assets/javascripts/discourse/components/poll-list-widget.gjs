@@ -274,7 +274,7 @@ export default class PollListWidgetComponent extends Component {
               {{#each this.hotPolls as |poll index|}}
                 <article class="swiper-slide">
                   <h3 class="text-with-line"><span>{{poll.category_name}}</span></h3>
-                  <h3><span>{{poll.post_topic_title}}</span></h3>
+                  <h3><span class="title-text">{{poll.post_topic_title}}</span></h3>
                   <div>
                     {{{poll.post_topic_overview}}}
                   </div>

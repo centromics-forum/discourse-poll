@@ -122,6 +122,21 @@
     height: 250px;
     padding: 0 2% 0 0;
 
+    h3  {
+      span.title-text {
+        display:inline-block;
+        max-width: 270px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    p {
+      max-height: 70px;
+      overflow: hidden;
+    }
+
     a {
       position: absolute;
       left: 0;
