@@ -138,6 +138,7 @@ export default class PollListWidgetComponent extends Component {
       slidesPerView: 1,
       centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
       resizeObserver: true,
+      cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -171,6 +172,7 @@ export default class PollListWidgetComponent extends Component {
       slidesPerView: 1,
       centeredSlides: false, // 중앙 정렬 해제 (필요 시 true로 변경)
       resizeObserver: true,
+      cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next2',
         prevEl: '.swiper-button-prev2',
