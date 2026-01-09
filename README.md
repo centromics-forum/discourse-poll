@@ -29,8 +29,8 @@ $ bundle exec rake db:migrate
 
 
 
-## Screenshots
-
+## Demo
+https://forum.centromics.org/
 
 ## Read More
 
